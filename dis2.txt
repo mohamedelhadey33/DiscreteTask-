@@ -1,0 +1,26 @@
+static bool perfect (int number)
+        {
+            int sum = 0;
+            for (int i = 1; i < number; i++)
+
+            {
+                if (number % i == 0) sum = sum + i;
+            }
+            if (sum == number) return true;
+            return false;
+
+         }
+        static void Main(string[] args)
+        {
+            Console.WriteLine("please enter first number");
+            int firstnumber = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("please enter second number");
+            int secondnumber = int.Parse(Console.ReadLine());
+            
+            for (int i = firstnumber; i < secondnumber; i++)
+            {
+                if (perfect(i))
+                    Console.WriteLine(i);
+
+            }
